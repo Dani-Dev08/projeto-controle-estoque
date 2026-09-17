@@ -26,7 +26,7 @@ app.get('/produtos/:id/fornecedores', associacaoController.listarFornecedoresDoP
 app.get('/fornecedores/:id/produtos', associacaoController.listarProdutosDoFornecedor);
 app.delete('/produtos/:id/fornecedores/:fornecedorId', associacaoController.desassociar);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}/`);
