@@ -1,4 +1,10 @@
-modules = ["nodejs-20", "web"]
+run = "cd backend && node app.js"
+modules = ["nodejs-20"]
 
-[nix]
-channel = "stable-25_05"
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[deployment]
+deploymentTarget = "cloudrun"
+run = "cd backend && node app.js"
