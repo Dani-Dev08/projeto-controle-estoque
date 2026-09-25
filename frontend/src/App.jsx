@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Produtos from './pages/Produtos';
 import Fornecedores from './pages/Fornecedores';
 import Associacoes from './pages/Associacoes';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <header className="navbar">
         <h1 className="logo">📦 Controle de Estoque</h1>
         <nav>
@@ -22,6 +22,6 @@ export default function App() {
           <Route path="/associacoes" element={<Associacoes />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
